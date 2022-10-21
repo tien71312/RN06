@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>HTML Basic</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<title>Demo flex</title>
+</head>
+<body>
+<style>
+body {
+margin: 0;
+}
+header {
+	background:#404040;
+	margin: auto;
+	border-bottom: 3px solid #111;
+	padding:20px;
+}
+.header-content {
+	margin: auto;
+    width: 100%;
+    color: #fff;
+    font-family: fantasy;
+}
+.header-logo, nav { 
+	width: 40%; 
+	float: left;
+}
+.clear {
+	clear: both;
+}
+nav {
+	width: 60%;
+	text-align:right;
+}
+nav ul {
+	list-style:none;
+	margin:0;
+}
+nav ul li{
+	display:inline;
+	margin-left:10px;
+}
+section {
+	margin:auto;
+	background:#f2f2f2;
+	padding-top: 10px;
+}
+.flex-content{
+	display:flex;
+	width:100%;
+	margin:auto;
+	flex-wrap:wrap;
+}
+.item{
+	width:36%;
+	background:#fff;
+	border-radius:12px;
+	padding:5%;
+	min-height: 200px; 
+	margin: 2%;
+}
+footer {
+	background:#404040;
+	margin:auto;
+	color:#fff;
+	text-align:center
+}
+.fter{
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    font-family: fantasy;
+}
+nav ul li a{
+	text-decoration:none;
+	color:#fff;
+}
+nav ul li a:hover{
+	text-decoration:none;
+	color:#fbea31;
+}
+.card img{
+	width:100%;
+}
+.card .tim{
+	width: 30px; float: right; margin-top: -10px;margin-right: -10px;
+}
+.card h2{
+	font-family:auto;
+	font-size:11pt;
+	margin:0;
+}
+.card h3{
+	font-family:auto;
+	font-size:10pt;
+	margin:0;
+}
+</style>
+
+	<header>
+		<div class="header-content">
+			<div class="header-logo">Logo</div>
+			<nav class="navi">
+				<ul>
+					<li><a href="#">Menu 1</a></li>
+					<li><a href="#">Menu 2</a></li>
+					<li><a href="#">Menu 3</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="clear"></div>
+	</header>
+
+	<section>
+		<div class="flex-content">
+			<div class="item"> 
+				<div class="card">
+					<img class="tim" src="img/heart0.png">
+					<img src="img/shoe1.jpg">
+					<h2>AIR MAX 270 BIG KIDS</h2>	
+					<h3>190$</h3>						
+				</div>
+			</div>
+			<div class="item"> 
+				<div class="card">
+					<img class="tim" src="img/heart0.png">
+					<img src="img/shoe2.jpg">
+					<h2>KYRIE FLY TRAP</h2>	
+					<h3>150$</h3>						
+				</div>
+			</div>
+			<div class="item"> 
+				<div class="card">
+					<img class="tim" src="img/heart.png">
+					<img src="img/shoe3.jpg">
+					<h2>HUSTLE FLYEASE</h2>	
+					<h3>130$</h3>						
+				</div>
+			</div>
+			<div class="item"> 
+				<div class="card">
+					<img class="tim" src="img/heart0.png">
+					<img src="img/shoe4.jpg">
+					<h2>NIKE AIR MAX</h2>	
+					<h3>60$</h3>						
+				</div>
+			</div>
+			<div class="item"> 
+				<div class="card">
+					<img class="tim" src="img/heart0.png">
+					<img src="img/shoe5.jpg">
+					<h2>REVOLUTION FLYEASE</h2>	
+					<h3>55$</h3>						
+				</div>
+			</div>
+			<div class="item"> 
+				<div class="card">
+					<img class="tim" src="img/heart.png">
+					<img src="img/shoe6.jpg">
+					<h2>NIKE REVOLUTION 4</h2>	
+					<h3>45$</h3>						
+				</div>
+			</div>			
+			
+
+		</div>
+	</section>
+	<footer>
+		<div class="fter">Footer</div>
+	</footer>
+</body>
+</html>

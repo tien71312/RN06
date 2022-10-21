@@ -1,0 +1,49 @@
+body{
+    background-color: pink;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.app-header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.task-count{
+    align-self: center;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.app-body{
+    flex-grow: 1;
+}
+.list-item-view{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.btn-button{
+    padding: 10px 20px;
+    background: none;
+    border-radius: 15px;
+}
+.input-text{
+    width: 72%;
+    height: 40px;
+    border-radius: 16px;
+    padding: 8px 16px;
+}
+.height-56{
+    height: 56px;
+}
