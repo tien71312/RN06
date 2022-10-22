@@ -37,7 +37,7 @@ _onClickLogin(){
                 >
                 <Text style={{color:'white', fontWeight:'700',fontSize:16}} >Login</Text>
              
-      </TouchableOpacity>
+      </TouchableOpacity> 
 
 
 
