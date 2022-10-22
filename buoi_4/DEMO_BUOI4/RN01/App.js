@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View ,Image, TextInput, TouchableOpacity} from 'react-native'
 import React, { Component } from 'react'
-import Login from './Login'
 // Một component chỉ có duy nhất 1 component tổng
 // View mặc định kiểu flex direction là column
 export default class App extends Component {

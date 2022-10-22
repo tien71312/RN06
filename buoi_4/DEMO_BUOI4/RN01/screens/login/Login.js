@@ -19,7 +19,7 @@ export default class Login extends Component {
                         <Text>Email</Text>
                         {/* Row */}
                         <View style={styles.containerInput__input}>
-                            <Image style={styles.containerInput__input_img} source={require('./assets/email.png')} />
+                            <Image style={styles.containerInput__input_img} source={require('../../assets/email.png')} />
                             <TextInput style={styles.containerInput__input_textInput} />
                         </View>
                     </View>
@@ -28,7 +28,7 @@ export default class Login extends Component {
                         <Text>Password </Text>
                         {/* Row */}
                         <View style={styles.containerInput__input}>
-                            <Image style={styles.containerInput__input_img} source={require('./assets/pass.png')} />
+                            <Image style={styles.containerInput__input_img} source={require('../../assets/pass.png')} />
                             <TextInput secureTextEntry={true} style={styles.containerInput__input_textInput} />
                         </View>
                     </View>   
