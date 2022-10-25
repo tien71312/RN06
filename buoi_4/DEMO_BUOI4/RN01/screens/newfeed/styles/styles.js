@@ -26,4 +26,27 @@ export default styles = StyleSheet.create({
         width: 24,
         height: 24
     },
+    item:{
+        flexDirection: "row",
+        alignItems: "center",
+        marginLeft: 16,
+        marginRight: 16,
+        marginTop: 16
+    },
+    item__body:{
+        marginLeft: 16
+    },
+    item__body__title:{
+        fontSize: 16,
+        fontWeight: "500"
+    },
+    item__body__desc:{
+        fontSize: 14,
+        color: "#CCC"
+    },
+    item__img:{
+        height: 56,
+        width: 56,
+        borderRadius: 28
+    }
 })
