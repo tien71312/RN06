@@ -3,7 +3,7 @@ import { StyleSheet, Platform } from "react-native"
 export default styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor: "#F6F6F6"
+        backgroundColor: "#fff"
     },
     header: {
         flexDirection: "row",
@@ -49,32 +49,72 @@ export default styles = StyleSheet.create({
     listavatar__item_text:{ 
         fontSize:16,
         color:'black',
-        fontWeight:'500'
+        fontWeight:'500',
+        marginBottom:12
     },   
 
     icon: {
         width: 24,
         height: 24
     },
-    item:{
-        flexDirection: "row",
-        alignItems: "center",
+    icon_more: {
+        width: 30,
+        height: 30,
+        marginTop:-30
+    }, 
+    post:{ 
         marginLeft: 16,
-        marginRight: 16,
-        marginTop: 16
+        marginRight: 16 
+    }, 
+    post__content:{ 
+        color:'#505050',
+        fontSize:15,
+        fontWeight:'500'
+    }, 
+    post__interaction:{ 
+       flexDirection:'row',
+       marginTop:14,
+       marginBottom:14
+    }, 
+    post__interaction_num:{ 
+        color:'#000',
+        fontSize:16,
+        fontWeight:'500', 
+        marginRight:15,
+        marginLeft:5
+     },              
+    post__item:{
+        flexDirection: "row",
+        alignItems: "center", 
+        marginTop: 16,
+        marginBottom:16
     },
-    item__body:{
+    post__item_avatar:{ 
+        width:'90%',
+        flexDirection:'row'
+    }, 
+    post__item_nametime:{   
+        flexDirection:'row'
+    },      
+    post__item__body:{
         marginLeft: 16
     },
-    item__body__title:{
+    post__item__body__title:{
+        color:'#505050',
         fontSize: 16,
-        fontWeight: "500"
+        fontWeight: "500",
     },
-    item__body__desc:{
-        fontSize: 14,
+    post__item__body__name:{
+
+        fontSize: 16,
+        color: "#CCC",
+        width:'60%'
+    },
+    post__item__body__time:{
+        fontSize: 16,
         color: "#CCC"
-    },
-    item__img:{
+    },  
+    post__item__img:{
         height: 56,
         width: 56,
         borderRadius: 28
