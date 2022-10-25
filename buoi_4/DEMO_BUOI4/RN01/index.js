@@ -8,6 +8,7 @@ import Login from './screens/login/Login';
 import DataBiding from './screens/contact/DataBiding';
 import Contact from './screens/contact/Contact';
 import Emoji from './screens/emoji/Emoji';
+import Newfeed from './screens/newfeed/Newfeed';
 import {name as appName} from './app.json';
  
-AppRegistry.registerComponent(appName, () => Emoji);
+AppRegistry.registerComponent(appName, () => Newfeed);
