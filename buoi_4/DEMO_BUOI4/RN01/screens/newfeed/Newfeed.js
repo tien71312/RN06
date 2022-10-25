@@ -110,7 +110,8 @@ export default function NewFeed() {
       {/* <FlatList 
         data={listData} //bắt buộc và phải là một mảng giá trị
         renderItem={(data)=> _renderItem(data)} //Bắt buộc trả ra giao diện của từng phần tử đã duyệt trong mảng
-        keyExtractor={(data)=> data.toString() }
+        //keyExtractor={(data)=> data.toString() }
+        keyExtractor={(data, index) => index.toString()}  
       /> */}
 
       <SectionList 
