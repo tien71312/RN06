@@ -1,3 +1,4 @@
+
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import React, { Component } from 'react'
 import styles from './styles/styles'
@@ -28,7 +29,7 @@ export default class Emoji extends Component {
         <View style={styles.container_emoji}>
           {this.datas.map((data,index)=>(
             <TouchableOpacity
-              onPress={()=>(this._onPressEmoji(data))}
+              onPress={()=>(this._onPressEmoji(data))} key={index}
             >
                 <Image style={styles.icon} source={data} />
             </TouchableOpacity>
@@ -39,4 +40,4 @@ export default class Emoji extends Component {
       </View>
     )
   }
-}
+} 
