@@ -10,6 +10,7 @@ import Contact from './screens/contact/Contact';
 import Emoji from './screens/emoji/Emoji';
 import Newfeed from './screens/newfeed/Newfeed';
 import Btnewfeed from './screens/btnewfeed/Btnewfeed';
+import Btzalo from './screens/btzalo/Btzalo';
 import {name as appName} from './app.json';
  
-AppRegistry.registerComponent(appName, () => Btnewfeed);
+AppRegistry.registerComponent(appName, () => Btzalo);
