@@ -9,6 +9,12 @@ export default class HomePage extends Component {
     }
     soA=0
     soB=0
+    _tingTong=(soa,sob)=>{
+      // dùng isNumber hoặc typeof để check là chuỗi hay số
+      const kq= Number(soa) + Number(sob)
+      this.props.navigation.navigate('detail',kq)
+
+    }
 
   render() {
     return (
@@ -17,16 +23,17 @@ export default class HomePage extends Component {
         alignItems:"center",
         flex:1
       }}> 
+      
+      <TextInput placeholder='soA' onChangeText={(value)=>{this.soA=value}}></TextInput>
+       <TextInput placeholder='soB' onChangeText={(value)=>{this.soB=value}}></TextInput>
       <TouchableOpacity style={{
         backgroundColor:"green",
         padding:16,
         width:150,
         }}
-        onPress={()=>this._redirectToDetail()}
+        onPress={()=>this._tingTong(this.soA,this.soB)}
         >
-            <TextInput placeholder='soA' onChangeText={(value)=>{this.soA=value}}></TextInput>
-            <TextInput placeholder='soB' onChangeText={(value)=>{this.soB=value}}></TextInput>
-           <Text>HomePage</Text> 
+           <Text>Tính tổng</Text> 
       </TouchableOpacity>
       </View>
     ) 

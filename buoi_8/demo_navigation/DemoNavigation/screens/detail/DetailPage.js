@@ -21,7 +21,7 @@ export default function DetailPage({navigation,route}) {
         }}
         onPress={()=>_redirectToDetail()}
         >
-           <Text>DetailPage</Text>   
+           <Text>Kết quả: {route.params}</Text>   
       </TouchableOpacity>
       </View>
   )

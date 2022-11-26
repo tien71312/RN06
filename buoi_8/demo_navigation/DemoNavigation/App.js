@@ -6,23 +6,23 @@ import HomePage from './screens/home/HomePage';
 import DetailPage from './screens/detail/DetailPage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-// const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
+// const Drawer = createDrawerNavigator();
 
 export default class App extends Component {
   render() {
     return (
       //NavigationContainer chỉ khai báo một lần duy nhất và ở page đầu trang
-      // <NavigationContainer>
-      //   <Stack.Navigator initialRouteName='home'>
-      //     {/*  name: tên  của màn hình được tạo trong Navigation Container
-      //          component: Giao diện sẽ được hiển thị lên màn hình
-      //           */}
-      //     <Stack.Screen name="home" component={HomePage} />
-      //     <Stack.Screen name="detail" component={DetailPage} />
-      //   </Stack.Navigator>
-      // </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName='home'>
+          {/*  name: tên  của màn hình được tạo trong Navigation Container
+               component: Giao diện sẽ được hiển thị lên màn hình
+                */}
+          <Stack.Screen name="home" component={HomePage} />
+          <Stack.Screen name="detail" component={DetailPage} />
+        </Stack.Navigator>
+      </NavigationContainer>
 
       // <NavigationContainer>
       //   <Tab.Navigator>
@@ -31,12 +31,12 @@ export default class App extends Component {
       //   </Tab.Navigator>
       // </NavigationContainer>
 
-      <NavigationContainer>
-        <Drawer.Navigator>
-          <Drawer.Screen name='home' component={HomePage} />
-          <Drawer.Screen name='detail' component={DetailPage} />
-        </Drawer.Navigator>
-      </NavigationContainer>
+      // <NavigationContainer>
+      //   <Drawer.Navigator>
+      //     <Drawer.Screen name='home pro' component={HomePage} />
+      //     <Drawer.Screen name='detail' component={DetailPage} />
+      //   </Drawer.Navigator>
+      // </NavigationContainer>
 
     )
   }
