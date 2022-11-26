@@ -5,8 +5,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomePage from './screens/home/HomePage';
 import DetailPage from './screens/detail/DetailPage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
+import { createDrawerNavigator } from '@react-navigation/drawer';
+// const Stack = createNativeStackNavigator();
+// const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 export default class App extends Component {
   render() {
@@ -21,13 +23,20 @@ export default class App extends Component {
       //     <Stack.Screen name="detail" component={DetailPage} />
       //   </Stack.Navigator>
       // </NavigationContainer>
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name='home' component={HomePage} />
-          <Tab.Screen name='detail' component={DetailPage} />
-        </Tab.Navigator>
-      </NavigationContainer>
 
+      // <NavigationContainer>
+      //   <Tab.Navigator>
+      //     <Tab.Screen name='home' component={HomePage} />
+      //     <Tab.Screen name='detail' component={DetailPage} />
+      //   </Tab.Navigator>
+      // </NavigationContainer>
+
+      <NavigationContainer>
+        <Drawer.Navigator>
+          <Drawer.Screen name='home' component={HomePage} />
+          <Drawer.Screen name='detail' component={DetailPage} />
+        </Drawer.Navigator>
+      </NavigationContainer>
 
     )
   }

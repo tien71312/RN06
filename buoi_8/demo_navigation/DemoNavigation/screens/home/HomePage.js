@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View,  TextInput} from 'react-native'
 import React, { Component } from 'react'
 
 export default class HomePage extends Component {
@@ -7,6 +7,8 @@ export default class HomePage extends Component {
         // navigation('tên stack', thamso)
         this.props.navigation.navigate('detail',{user:'Hello',pass:'123456'})
     }
+    soA=0
+    soB=0
 
   render() {
     return (
@@ -22,9 +24,11 @@ export default class HomePage extends Component {
         }}
         onPress={()=>this._redirectToDetail()}
         >
+            <TextInput placeholder='soA' onChangeText={(value)=>{this.soA=value}}></TextInput>
+            <TextInput placeholder='soB' onChangeText={(value)=>{this.soB=value}}></TextInput>
            <Text>HomePage</Text> 
       </TouchableOpacity>
       </View>
-    )
+    ) 
   }
 }
