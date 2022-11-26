@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       //NavigationContainer chỉ khai báo một lần duy nhất và ở page đầu trang
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='detail'>
+        <Stack.Navigator initialRouteName='home'>
           {/*  name: tên  của màn hình được tạo trong Navigation Container
                component: Giao diện sẽ được hiển thị lên màn hình
                 */}
