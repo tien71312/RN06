@@ -41,3 +41,7 @@ export default class App extends Component {
     )
   }
 }
+
+// Viết giao diện có 2 Fiel soA và soB và button tính tổng.
+// Tính giá trị của số A và số B hiển thị kết quả này qua màn hình detail
+// Kết quả là : kq
