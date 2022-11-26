@@ -1,6 +1,6 @@
 import { ICONS, IMAGES } from "./Images"
 
-export const screens = {
+export const screens = { 
     home: "home",
     detail: "detail",
     map: "map",
