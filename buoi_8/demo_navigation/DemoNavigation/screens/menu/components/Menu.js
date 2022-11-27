@@ -1,10 +1,12 @@
 import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { categoryData, menuData } from '../../../common/Contant'
+import { categoryData } from '../../../common/Contant'
 import styles from '../styles/styles'
 import { ICONS } from '../../../common/Images'
+import { useNavigation } from '@react-navigation/native'
 
-export default function Menu() {
+export default function Menu(props) {
+  const navigation = useNavigation()
 
   getNameCategoryById = (id) =>{
     //Lọc ra category data thoả điều kiện thông qua filter
@@ -21,13 +23,14 @@ export default function Menu() {
     //     categoryName = value.name
     //     }
     //   })
-    
     return categoryName
   }
 
   renderItem = ({item}) =>(
+
     <TouchableOpacity
       style={styles.menu}
+      onPress={()=> navigation.push('detail',{item}) }
     >
       <View>
         <Image style={styles.menu__img} source={item.photo} />
@@ -49,7 +52,7 @@ export default function Menu() {
 
   return (
     <FlatList 
-      data={menuData}
+      data={props.data}
       renderItem={renderItem}
     />
   )

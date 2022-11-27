@@ -1,28 +1,24 @@
-import { View, Text,TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native'
 import React from 'react'
+import styles from './styles/styles'
+import AppBar from './components/Appbar'
+import Description from './components/Description'
+import Order from './components/Order'
+import { useRoute } from '@react-navigation/native'
 
-export default function DetailPage({navigation,route}) {
-    _redirectToDetail =()=>{
-        // Navigation: Giúp chuyển qua page được chỉ định khai báo ở App.js
-        // Push: luôn chuyển page
-        // Navigation: nếu như page đã tồn tại thì sẽ không chuyển nữa
-        navigation.navigate('detail')
-    }
+export default function DetailPage() {
+    const route = useRoute()
+    const params = route.params
   return (
-    <View style={{
-        justifyContent:"center",
-        alignItems:"center",
-        flex:1
-      }}> 
-      <TouchableOpacity style={{
-        backgroundColor:"green",
-        padding:16,
-        width:150,
-        }}
-        onPress={()=>_redirectToDetail()}
-        >
-           <Text>Kết quả: {route.params}</Text>   
-      </TouchableOpacity>
-      </View>
+    <SafeAreaView style={styles.container}>
+        <AppBar />
+        <Description 
+            img={params.item.photo} 
+            title={params.item.name} 
+            price={params.item.price} 
+            desc={params.item.description} 
+            calo={params.item.calories} />
+        <Order />
+    </SafeAreaView>
   )
 }

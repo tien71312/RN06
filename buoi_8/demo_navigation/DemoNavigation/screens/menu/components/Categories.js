@@ -1,23 +1,25 @@
-import { View, Text, FlatList,TouchableOpacity,Image } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { categoryData } from '../../../common/Contant';
+import styles from '../styles/styles'
+import { categoryData } from '../../../common/Contant'
 
-export default function Categories() {
+export default function Categories(props) {
   return (
     <View style={styles.category}>
       <Text style={styles.category__text}>Main</Text>
       <Text style={styles.category__text}>Categories</Text>
-      <CategoriesList /> 
+      <CategoriesList onSelectedCategory={props.onSelectedCategory} categorySelected={props.categorySelected} />
     </View>
   )
 }
 
-export const CategoriesList = () => {
-    let currentCategory = 1;
+export const CategoriesList = (props) => {
+    let currentCategory = props.categorySelected;
 
-    renderItem = ({item}) => (
+    renderItem = ({item}) => ( 
         <TouchableOpacity
             style={[styles.categoryList, item.id == currentCategory ? styles.categoryList_selected : ""]}
+            onPress={()=> props.onSelectedCategory(item.id)}
         >
             <View style={[styles.categoryList__circle, item.id == currentCategory ? styles.categoryList__circle_selected : ""]}>
                 <Image style={styles.icon} source={item.icon}/>

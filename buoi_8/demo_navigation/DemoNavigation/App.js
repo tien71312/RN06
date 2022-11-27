@@ -31,6 +31,12 @@ export default class App extends Component {
       //   </Stack.Navigator>
       // </NavigationContainer>
 
+      // <NavigationContainer>
+      //   <StackNavigator />
+      //  </NavigationContainer> 
+
+
+
       <NavigationContainer> 
         <Tab.Navigator
           screenOptions={{
