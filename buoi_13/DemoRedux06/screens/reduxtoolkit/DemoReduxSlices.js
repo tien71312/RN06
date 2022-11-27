@@ -4,6 +4,11 @@ import { getProduct } from "./DemoReduxToolkitThunk";
 initialState = {
     count:0
 }
+//Tạo reducer và action thông qua createSlice
+// Chia làm 2 loại action
+// Action (Không xử lý bất đồng bộ) => action này được tạo ở reducers và phải được export ở slice khi cần được sử dụng
+// Action (có xử lý bất đồng bộ) => action này sẽ được tạo Thunk và sẽ được lắng nghe ở extraReducers
+
 const demoReduxToolkitSlice= createSlice({
     name:'demoReduxSlice', //Tên Slice không đặt  trùng
     initialState: initialState, // Khởi tạo giá trị cho sate trên store dùng chung
@@ -18,6 +23,16 @@ const demoReduxToolkitSlice= createSlice({
         giamCount: (state,action) => {
             state.count = state.count - 1
         }
+    },
+    extraReducers: builder => {
+        // Dùng để lắng nghe giá trị trả về từ Thunk
+        builder.addCase(getProduct.pending,(state,action)=>{
+
+        }).addCase(getProduct.fulfilled,(state,action)=>{
+            console.log('Thunk')
+            console.log(state)
+            console.log(action)
+        })
     }
 })
 //Export action trong slice cho UI page sử dụng
