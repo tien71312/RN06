@@ -10,6 +10,10 @@ export default styles= StyleSheet.create({
         width:24,
         height:24
     },
+    icon16:{
+        width: 16,
+        height: 16
+    },
     appbar:{
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -64,5 +68,42 @@ export default styles= StyleSheet.create({
     categoryList__title_selected:{
         color: COLORS.white,
         fontWeight: "700"
+    },
+    menu:{
+        padding: SIZES.padding * 2
+    },
+    menu__img:{
+        width: '100%',
+        height: 200,
+        borderRadius: SIZES.radius
+    },
+    menu__duration:{
+        position: 'absolute',
+        bottom: 0,
+        padding: SIZES.padding * 2,
+        backgroundColor: COLORS.white,
+        borderTopRightRadius: SIZES.radius,
+        borderBottomLeftRadius: SIZES.radius,
+        ...STYLES.shadow
+    },
+    menu__title:{
+        fontSize: 20,
+        fontWeight: '700',
+        marginTop: SIZES.padding
+    },
+    menu__type:{
+        flexDirection: 'row'
+    },
+    mRight8:{
+        marginRight: 8
+    },
+    mLeft8:{
+        marginLeft: 8
+    },
+    mBottom8:{
+        marginBottom:8
+    },
+    mTop8:{
+        marginTop: 8
     }
 })
