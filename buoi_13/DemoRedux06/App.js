@@ -5,12 +5,13 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 import DemoFuncRedux from './screens/redux/DemoFuncRedux'
 import DemoFuncReduxToolkit from './screens/reduxtoolkit/DemoFuncReduxToolkit'
+import DemoHook from './screens/demohook/DemoHook'
 
 export default function App() {
   return (
     <Provider store={store}>
       <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-        <DemoFuncReduxToolkit />
+        <DemoHook />
       </View> 
     </Provider>
 
