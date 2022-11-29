@@ -1,12 +1,17 @@
-import { View, Text,FlatList,ActivityIndicator,Image,Dimensions } from 'react-native'
-import React from 'react'
+import { View, Text,FlatList,ActivityIndicator,Image,Dimensions ,TouchableOpacity} from 'react-native'
+import React, { Component } from 'react'
 import StaggeredList,{ AnimationType } from '@mindinventory/react-native-stagger-view'
 import styles from '../styles/styles';
-
+import { NavigationContainer, useNavigation } from '@react-navigation/native';  
 export default function ListShoe(props) { 
+  const navigation = useNavigation()
   const SCREEN_WIDTH = Dimensions.get('window').width;
+ 
  const renderChildren = item => { 
     return (
+      <TouchableOpacity
+         onPress={()=> navigation.push('detail',{id:item.id,name:item.name,price:item.price,image:item.image}) }
+      >
       <View style={getChildrenStyle()} key={item.id}>
         <View style={styles.icon_favorite}><Image style={styles.icon} source={require('../images/favorite.png')} /></View>
         <View style={styles.avatarImage}>
@@ -23,6 +28,7 @@ export default function ListShoe(props) {
           <Text style={styles.text_price}>$ {item.price}</Text>
         </View>
       </View>
+      </TouchableOpacity>
     );
   };
 

@@ -14,6 +14,14 @@ export default styles= StyleSheet.create({
         width: 30,
         height: 30
     },
+    images:{
+      width: '80%',
+      height:200, 
+   }, 
+   images_mini:{
+    width: 70,
+    height:60, 
+   }, 
     btn_icon:{
         backgroundColor:'#fff',
         padding:10,
@@ -87,8 +95,66 @@ export default styles= StyleSheet.create({
       },
       text_price:{
         fontSize:16,fontWeight:'500',color:'#000'
-      }
-
+      },
+      detail_slide:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',width:'80%',
+        backgroundColor:'#fff',
+        padding:10,
+        borderRadius:10,
+        height:70,
+        marginBottom:-30,
+        zIndex:999
+      },
+      shadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 3,
+        elevation: 7,
+        },
+        detail_bottom:{
+          width: '100%',
+          height: 400,
+          backgroundColor: '#fff',
+          justifyContent: 'center',
+          alignItems: 'center', 
+          borderTopLeftRadius:40,
+          borderTopRightRadius:40,
+          bottom: 0
+        },
+        detail_title:{
+          flexDirection:'row',
+          justifyContent:'space-between',
+          width:'80%',
+          padding:5,
+          backgroundColor:'#fff',
+          marginTop:-80
+        },
+        detail_title__text:{
+          color:'#000',fontSize:25,
+          fontWeight:'700'
+        },
+        detail_price__text:{
+          color:'#000',
+          fontSize:25,
+          fontWeight:'700'
+        },
+        btn_buy:{
+          backgroundColor:'#000',
+          padding:10,
+          borderRadius:10
+        },
+        btn_buy__text:{
+          color:'#fff',
+          fontSize:20,
+          textAlign:'center'
+        }
+        
 
 
 })

@@ -4,8 +4,12 @@ import Appbar from './component/Appbar'
 import Search from './component/Search'
 import ListShoe from './component/ListShoe'
 import styles from './styles/styles'
+import { Provider } from 'react-redux'
+import { store } from '../../store' 
 
+ 
 export default function Main() {
+
     // Hàm filter
     // Thư viện stagger https://github.com/Mindinventory/react-native-stagger-view
     const [isLoading, setLoading] = useState(true);
@@ -41,10 +45,14 @@ export default function Main() {
     },[keysearch]) 
    // console.log(data)
   return (
-    <SafeAreaView style={styles.container}>
-      <Appbar />   
-      <Search num={data.length} keysearch={keysearch} getSearch={callBackgetSearch} /> 
-      <ListShoe data={data} isLoading={isLoading} />
-    </SafeAreaView>
+    <Provider store={store}>
+      <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+        <SafeAreaView style={styles.container}>
+          <Appbar />   
+          <Search num={data.length} keysearch={keysearch} getSearch={callBackgetSearch} /> 
+          <ListShoe data={data} isLoading={isLoading} />
+        </SafeAreaView>
+    </View> 
+    </Provider>
   )
 }

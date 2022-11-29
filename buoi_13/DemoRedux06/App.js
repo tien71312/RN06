@@ -7,14 +7,21 @@ import DemoFuncRedux from './screens/redux/DemoFuncRedux'
 import DemoFuncReduxToolkit from './screens/reduxtoolkit/DemoFuncReduxToolkit'
 import DemoHook from './screens/demohook/DemoHook'
 import Main from './screens/shoes/Main'
-
+import Detail from './screens/shoes/component/Detail'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { NavigationContainer } from '@react-navigation/native'
+const Stack = createNativeStackNavigator();
 export default function App() {
-  return (
-    <Provider store={store}>
-      <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-        <Main />
-      </View> 
-    </Provider>
+  return ( 
+    <NavigationContainer> 
+    <Stack.Navigator initialRouteName='home'>
+      {/*  name: tên  của màn hình được tạo trong Navigation Container
+           component: Giao diện sẽ được hiển thị lên màn hình
+            */} 
+      <Stack.Screen name="home" component={Main} options={{ title: 'HOME' }} />     
+      <Stack.Screen name="detail" component={Detail} options={{ title: 'DETAIL' }} />
+    </Stack.Navigator> 
+    </NavigationContainer> 
 
   )
 }
