@@ -45,20 +45,20 @@ const getChildrenStyle = () => {
       <View style={styles.activityIndicatorWrapper}>
         <ActivityIndicator color={'green'} size={'large'} />
       </View>
-    ) : (     
-      <StaggeredList
-      data={props.data}
-      animationType={'FADE_IN_FAST'}
-      contentContainerStyle={styles.contentContainer}
-      showsVerticalScrollIndicator={false}
-      renderItem={({item}) => renderChildren(item)}
-      isLoading={props.isLoading}
-      LoadingView={
-        <View style={styles.activityIndicatorWrapper}>
-          <ActivityIndicator color={'black'} size={'large'} />
-        </View>
-      }
-    />     
+    ) : ( 
+        <StaggeredList 
+              data={props.data}
+              animationType={'FADE_IN_FAST'}
+              contentContainerStyle={styles.contentContainer}
+              showsVerticalScrollIndicator={false}
+              renderItem={({item}) => renderChildren(item)}
+              isLoading={props.isLoading}
+              LoadingView={
+                <View style={styles.activityIndicatorWrapper}>
+                  <ActivityIndicator color={'black'} size={'large'} />
+                </View>
+              }
+            />    
     )}
     </View>
   
