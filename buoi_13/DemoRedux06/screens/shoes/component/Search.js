@@ -1,7 +1,8 @@
+import { memo } from 'react';
 import { View, Text,Image,TextInput, TouchableOpacity } from 'react-native' 
 import styles from '../styles/styles' 
 //Phải sử dụng memo, callback
-export default function Search(props) {
+function Search(props) {
   // props.getSearch()
   // const key=props.key
   let keys=props.keysearch;
@@ -36,3 +37,5 @@ export default function Search(props) {
     </View>
   )
 }
+
+export default memo(Search)
